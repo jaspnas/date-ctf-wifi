@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-image: url('/resource/background-image.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            font-family: Arial, sans-serif;
+        }
+
+        .login-container {
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+            text-align: center; /* Center the content inside the container */
+        }
+
+        .header {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .error-message {
+            color: red;
+        }
+
+        .submit-button {
+            margin-top: 10px; /* Add some space above the button */
+        }
+    </style>
+    <script>
+        function submitForm(event) {
+            event.preventDefault(); // Prevent default form submission behavior
+
+            const password = document.getElementById("password").value;
+            const requestData = {
+                password: password
+            };
+
+            // Send a POST request to the API
+            fetch('/api/auth', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(requestData)
+            })
+            .then(response => {
+                if (response.status === 401) {
+                    throw new Error('Unauthorized'); // Trigger catch block for displaying error
+                } else if (response.redirected) {
+                    // Follow the redirect
+                    window.location.href = response.url;
+                } else {
+                    return response.json();
+                }
+            })
+            .then(data => {
+                // Handle the API response here
+                console.log(data);
+            })
+            .catch(error => {
+                if (error.message === 'Unauthorized') {
+                    // Display error message for unauthorized access
+                    const errorMessage = document.getElementById("error-message");
+                    errorMessage.textContent = "Incorrect password or unauthorized access.";
+                } else {
+                    console.error('Error:', error);
+                }
+            });
+        }
+    </script>
+</head>
+<body>
+    <div class="login-container">
+        <div class="header">Albin's Notes</div>
+        <form onsubmit="submitForm(event)">
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+            <br>
+            <button type="submit" class="submit-button">Submit</button>
+        </form>
+        <p id="error-message" class="error-message"></p>
+    </div>
+</body>
+</html>
