@@ -1,6 +1,6 @@
 {
   "password": "Albindor23",
-  "flag": "date_flag{albin_misspelled}",
+  "flag": "date_flag{albins_secret_spells}",
   "notes": [
     {
       "title": "WIFI Intrusions",
@@ -27,6 +27,10 @@
       "body": "My potion brewery is being torn down right in front of my eyes. How could they do this to me"
     },
     {
+      "title": "Moira von Wright",
+      "body": "The wizards best insider got fired. It was an inside job I tell you"
+    },
+    {
       "title": "Flags",
       "body": "I store some magic flags in the api, I don't remember the endpoint though"
     },
@@ -39,8 +43,12 @@
       "body": "/flag in the api is giving me a random error, I wonder why"
     },
     {
-      "title": "",
-      "body": ""
+      "title": "Donkero",
+      "body": "I really like donkero, I should do some black magic fuckery to abolish the donkero prohibition"
+    },
+    {
+      "title": "Sus",
+      "body": "Amogus"
     }
   ]
 }
