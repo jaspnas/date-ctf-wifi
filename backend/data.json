@@ -3,8 +3,8 @@
   "flag": "date_flag{albin_misspelled}",
   "notes": [
     {
-      "title": "",
-      "body": ""
+      "title": "WIFI Intrusions",
+      "body": "I have recently been seeing a bunch of random devices on my network. Should probably change my password but I can't be bothered to remember a new one"
     },
     {
       "title": "Spells",
@@ -23,6 +23,10 @@
       "body": "That Heinz Werner guy really is onto me. \n I should really start being more careful because of him"
     },
     {
+      "title": "Potions",
+      "body": "My potion brewery is being torn down right in front of my eyes. How could they do this to me"
+    },
+    {
       "title": "Flags",
       "body": "I store some magic flags in the api, I don't remember the endpoint though"
     },
@@ -33,6 +37,10 @@
     {
       "title": "Random error",
       "body": "/flag in the api is giving me a random error, I wonder why"
+    },
+    {
+      "title": "",
+      "body": ""
     }
   ]
 }
