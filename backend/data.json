@@ -1,10 +1,14 @@
 {
-  "password": "rockyalbin",
-  "flag": "date_flag{test}",
+  "password": "Albindor23",
+  "flag": "date_flag{albin_misspelled}",
   "notes": [
     {
+      "title": "",
+      "body": ""
+    },
+    {
       "title": "Spells",
-      "body": "Spells are super important for me \n They are only stored in a physical notebook only I know of"
+      "body": "Spells are super important for me \n They are only stored in a physical notebook only I know the location of"
     },
     {
       "title": "API OPTIONS",
@@ -21,6 +25,10 @@
     {
       "title": "Flags",
       "body": "I store some magic flags in the api, I don't remember the endpoint though"
+    },
+    {
+      "title": "Cybersecurity course",
+      "body": "I wasn't able to pass the ÅAU cybersecurity course, my account got deactivated."
     },
     {
       "title": "Random error",
