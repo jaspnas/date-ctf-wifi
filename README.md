@@ -1,9 +1,10 @@
 ## WARNING This should NOT be considered secure. 
 
+This was a challenge for the [DaTe ctf 2023](https://datateknologerna.org/ctf/wizardry/magic_signal)
 
 # Initial hint
 
-**
+***
 
 I have been spying on the great wizard Albin for the past few months. I have noticed that he has set up a network where he lives that seems to be isolated from the rest of the world as not even I am able to access it remotely.
 Could you go see if you can get into it and see if there is anything interesting on the network?
